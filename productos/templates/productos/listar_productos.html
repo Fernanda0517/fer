@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listar Productos</title>
+</head>
+<body>
+    <h1>Listar Productos</h1>
+    <ul>
+        {% for producto in productos %}
+            <li>{{ producto.nombre }} - {{ producto.descripcion }} - ${{ producto.precio }} - {{ producto.tipo.nombre }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'registrar_producto' %}">Registrar Nuevo Producto</a>
+</body>
+</html>
